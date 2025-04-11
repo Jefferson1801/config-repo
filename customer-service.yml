@@ -17,6 +17,7 @@ logging:
   level:
     root: INFO
     com.example.customer: DEBUG
+    org.springframework.data.mongodb.core: DEBUG
 
 validation:
   vip:
