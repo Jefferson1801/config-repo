@@ -18,6 +18,12 @@ logging:
     root: INFO
     com.example.customer: DEBUG
 
+validation:
+  vip:
+    min-credit-limit: 10000
+  pyme:
+    min-credit-limit: 5000
+
 springdoc:
   paths-to-match: /**
   default-produces-media-type: application/json
