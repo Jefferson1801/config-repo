@@ -5,6 +5,16 @@ server:
 spring:
   application:
     name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+    config:
+      enabled: true
+    main:
+      web-application-type: reactive
 
 eureka:
   client:

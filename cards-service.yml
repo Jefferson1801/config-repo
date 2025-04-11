@@ -1,5 +1,5 @@
 server:
-  port: 0
+  port: 8086
 
 spring:
   application:
@@ -16,4 +16,13 @@ eureka:
 logging:
   level:
     root: INFO
-    com.banco.cards: DEBUG
+    com.example.cards: DEBUG
+
+springdoc:
+  paths-to-match: /**
+  default-produces-media-type: application/json
+  swagger-ui:
+    path: /swagger-ui.html
+    enabled: true
+  api-docs:
+    path: /v3/api-docs
