@@ -17,6 +17,7 @@ logging:
   level:
     root: INFO
     com.example.transactions: DEBUG
+    org.springframework.data.mongodb.core: DEBUG
 
 springdoc:
   paths-to-match: /**
