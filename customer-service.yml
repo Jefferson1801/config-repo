@@ -1,6 +1,10 @@
 server:
   port: 8081
 
+customer-service:
+  cards-service-url: http://localhost:8086/api/cards
+  accounts-service-url: http://localhost:8082/api/accounts
+
 spring:
   application:
     name: customer-service
