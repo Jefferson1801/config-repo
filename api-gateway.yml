@@ -41,4 +41,7 @@ zuul:
       cards-service:
         path: /cards-service/**
         service-id: cards-service
+      auth-service:
+        path: /auth-service/**
+        service-id: auth-service
 
