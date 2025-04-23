@@ -28,7 +28,7 @@ spring:
           predicates:
             - Path=/reports-service/**
         - id: cards-service
-          uri: lb://cards-service
+          uri: lb://CARDS-SERVICE
           predicates:
             - Path=/cards-service/**
         - id: auth-service
