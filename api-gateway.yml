@@ -8,23 +8,23 @@ spring:
     gateway:
       routes:
         - id: customer-service
-          uri: lb://customer-service
+          uri: lb://CUSTOMER-SERVICE
           predicates:
             - Path=/customer-service/**
         - id: accounts-service
-          uri: lb://accounts-service
+          uri: lb://ACCOUNTS-SERVICE
           predicates:
             - Path=/accounts-service/**
         - id: credits-service
-          uri: lb://credits-service
+          uri: lb://CREDITS-SERVICE
           predicates:
             - Path=/credits-service/**
         - id: transactions-service
-          uri: lb://transactions-service
+          uri: lb://TRANSACTIONS-SERVICE
           predicates:
             - Path=/transactions-service/**
         - id: reports-service
-          uri: lb://reports-service
+          uri: lb://REPORTS-SERVICE
           predicates:
             - Path=/reports-service/**
         - id: cards-service
@@ -32,7 +32,7 @@ spring:
           predicates:
             - Path=/cards-service/**
         - id: auth-service
-          uri: lb://auth-service
+          uri: lb://AUTH-SERVICE
           predicates:
             - Path=/auth-service/**
     config:
