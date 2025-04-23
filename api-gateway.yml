@@ -16,6 +16,9 @@ spring:
     main:
       web-application-type: reactive
 
+jwt:
+  secret: tvr+7OoVISnTvYGNHp9wIglARX4FCUoC3DPRTS0mToY=
+
 eureka:
   client:
     service-url:
