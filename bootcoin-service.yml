@@ -1,21 +1,17 @@
 server:
-  port: 8081
-
-customer-service:
-  cards-service-url: http://localhost:8086/api/cards
-  accounts-service-url: http://localhost:8082/api/accounts
+  port: 8088
 
 spring:
   application:
-    name: customer-service
+    name: bootcoin-service
   data:
     mongodb:
-      uri: mongodb://localhost:27017/customersdb
+      uri: mongodb://localhost:27017/bootcoindb
   kafka:
     bootstrap-servers: localhost:9092
-    redis:
-      host: localhost
-      port: 6379
+  redis:
+    host: localhost
+    port: 6379
 
 eureka:
   client:
@@ -25,14 +21,8 @@ eureka:
 logging:
   level:
     root: INFO
-    com.example.customer: DEBUG
+    com.example.bootcoin: DEBUG
     org.springframework.data.mongodb.core: DEBUG
-
-validation:
-  vip:
-    min-credit-limit: 10000
-  pyme:
-    min-credit-limit: 5000
 
 springdoc:
   paths-to-match: /**
