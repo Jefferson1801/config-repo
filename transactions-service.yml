@@ -9,6 +9,9 @@ spring:
       uri: mongodb://localhost:27017/transactionsdb
   kafka:
     bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
     redis:
       host: localhost
       port: 6379
@@ -18,11 +21,29 @@ eureka:
     service-url:
       defaultZone: http://localhost:8761/eureka
 
+security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8087
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      accountsService:
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+
 logging:
   level:
     root: INFO
     com.example.transactions: DEBUG
     org.springframework.data.mongodb.core: DEBUG
+    org.springframework.security: DEBUG
+
+transactions:
+  commission:
+    default: 5.0
 
 springdoc:
   paths-to-match: /**
